@@ -13,7 +13,7 @@ class TfManage2Dev < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/sorinlg/tf-manage2/releases/download/v0.9.5-rc.0/tf-manage2_Darwin_x86_64.tar.gz"
-      sha256 "b5c63dcae7542c96383e77a3d3840b21a01e87df97c13207fb5637e85db5926b"
+      sha256 "6b2c57cf6eab228e53fdb3866412efe7cd111fc3e9e00122f2201c5d12945bd4"
 
       def install
         bin.install "tf"
@@ -23,7 +23,7 @@ class TfManage2Dev < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/sorinlg/tf-manage2/releases/download/v0.9.5-rc.0/tf-manage2_Darwin_arm64.tar.gz"
-      sha256 "a3b38295d717fd8c27647889fe6e025f7d901f13e2f6d36bd705a7afdbdbb534"
+      sha256 "1c4f5649b3da4c91540058d4f70f2bfaaf3defb191a2c8f11a01ff7a59adfca0"
 
       def install
         bin.install "tf"
@@ -36,7 +36,7 @@ class TfManage2Dev < Formula
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
       url "https://github.com/sorinlg/tf-manage2/releases/download/v0.9.5-rc.0/tf-manage2_Linux_x86_64.tar.gz"
-      sha256 "0db42e9b50dfe019afe7cba70b8b7529dbe69fe41a608e1e6fc2da2c9d5f707c"
+      sha256 "05abddb8b0413d071ad181be42a39e5fc72058e580f8d85def63a9492a98a3f7"
       def install
         bin.install "tf"
         bash_completion.install "bin/tf_complete.sh" => "tf"
@@ -45,7 +45,7 @@ class TfManage2Dev < Formula
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/sorinlg/tf-manage2/releases/download/v0.9.5-rc.0/tf-manage2_Linux_arm64.tar.gz"
-      sha256 "ddc07647dabe0a710a7c017fe24207d7b93a0e6aa67d7b5e3c5342e6a9fc802d"
+      sha256 "40a164265fdab764b8d08f982ec1547c7f783bbc6d27ced32c116ef42ca406d1"
       def install
         bin.install "tf"
         bash_completion.install "bin/tf_complete.sh" => "tf"
