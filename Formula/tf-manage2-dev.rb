@@ -5,15 +5,15 @@
 class TfManage2Dev < Formula
   desc "Terraform workspace manager with enhanced CI/CD detection"
   homepage "https://github.com/sorinlg/tf-manage2"
-  version "0.9.8"
+  version "0.9.9-rc.0"
   license "MIT"
 
   depends_on "terraform" => :optional
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/sorinlg/tf-manage2/releases/download/v0.9.8/tf-manage2_Darwin_x86_64.tar.gz"
-      sha256 "422c34ab700cc3a14ffc7e182b2f47fde6ad0d844aea482430636700927ba902"
+      url "https://github.com/sorinlg/tf-manage2/releases/download/v0.9.9-rc.0/tf-manage2_Darwin_x86_64.tar.gz"
+      sha256 "e3159467c85adb285abf3a02d025e5612cdd78455de47ba38c8592aa0aa5b48c"
 
       define_method(:install) do
         bin.install "tf"
@@ -22,8 +22,8 @@ class TfManage2Dev < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/sorinlg/tf-manage2/releases/download/v0.9.8/tf-manage2_Darwin_arm64.tar.gz"
-      sha256 "30a0ba7732f3ba453ece3aa2cc5daadf64b991b44ba1ebc35a32910eb10bfb29"
+      url "https://github.com/sorinlg/tf-manage2/releases/download/v0.9.9-rc.0/tf-manage2_Darwin_arm64.tar.gz"
+      sha256 "685dd5b8df3e73dacbef9b7b8696bbd64abeeec844eb1fcd89e7d1f9cbb33868"
 
       define_method(:install) do
         bin.install "tf"
@@ -35,8 +35,8 @@ class TfManage2Dev < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/sorinlg/tf-manage2/releases/download/v0.9.8/tf-manage2_Linux_x86_64.tar.gz"
-      sha256 "929d3325fcc0c229e1fc03becc9024584c7a174d01b31a928080ff1151a92db4"
+      url "https://github.com/sorinlg/tf-manage2/releases/download/v0.9.9-rc.0/tf-manage2_Linux_x86_64.tar.gz"
+      sha256 "a31a40a04b4c7a55141421f4eeecbc99d4e509c1017de5c3b87d6d06742a8403"
       define_method(:install) do
         bin.install "tf"
         bash_completion.install "bin/tf_complete.sh" => "tf"
@@ -44,8 +44,8 @@ class TfManage2Dev < Formula
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/sorinlg/tf-manage2/releases/download/v0.9.8/tf-manage2_Linux_arm64.tar.gz"
-      sha256 "b1cd771a20a9717c92644aaae961007e768538a4dfe3e3d97782534aa041eb59"
+      url "https://github.com/sorinlg/tf-manage2/releases/download/v0.9.9-rc.0/tf-manage2_Linux_arm64.tar.gz"
+      sha256 "c505311125856c637ad54a579d12314a1fa2d6078fce898c3408379a29314195"
       define_method(:install) do
         bin.install "tf"
         bash_completion.install "bin/tf_complete.sh" => "tf"
